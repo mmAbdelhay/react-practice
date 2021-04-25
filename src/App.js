@@ -2,6 +2,7 @@ import './App.css';
 import React from 'react';
 import Header from './components/header/Header'
 import Footer from './components/footer/Footer'
+import Profile from './components/profile/Profile'
 
 class App extends React.Component {
 
@@ -35,6 +36,8 @@ class App extends React.Component {
                     <div> count : {this.state.count}</div>
                     <button onClick={()=>this.changeCount("+")} className="btn btn-primary">increase</button>
                     <button onClick={()=>this.changeCount("-")} className="btn btn-primary">decrease</button>
+                    <hr/>
+                    <Profile/>
                 </div>
                 <Footer name={this.state.name}/>
             </>
