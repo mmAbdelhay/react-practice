@@ -1,7 +1,8 @@
 import React from 'react';
 import './footer.css';
+import Profile from "../profile/Profile";
 
-class Header extends React.Component {
+class Footer extends React.Component {
     constructor(props) {
         super();
         this.state = {
@@ -20,4 +21,8 @@ class Header extends React.Component {
     }
 }
 
-export default Header;
+Footer.defaultProps = {
+    name: "Abdelhay"
+}
+
+export default Footer;
