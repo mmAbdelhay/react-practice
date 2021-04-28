@@ -10,6 +10,7 @@ import Header from './components/header/Header'
 import Footer from './components/footer/Footer'
 import Form from './components/form/form'
 import List from "./components/list/List";
+import Todo from "./components/todo/Todo";
 
 class App extends React.Component {
 
@@ -39,10 +40,6 @@ class App extends React.Component {
                 <Header/>
                 <div className="container"><br/>
                     <Switch>
-                        <Route path="/">
-                            <p className="p">Welcome {this.state.name} </p>
-                            <button onClick={this.changeName} className="btn btn-primary">change name</button>
-                        </Route>
                         <Route path="/counter">
                             <div> count : {this.state.count}</div>
                             <button onClick={() => this.changeCount("+")} className="btn btn-primary">increase</button>
@@ -50,6 +47,11 @@ class App extends React.Component {
                         </Route>
                         <Route path="/form" component={Form} />
                         <Route path="/list" component={List} />
+                        <Route path="/todo" component={Todo} />
+                        <Route path="/">
+                            <p className="p">Welcome {this.state.name} </p>
+                            <button onClick={this.changeName} className="btn btn-primary">change name</button>
+                        </Route>
                     </Switch>
                 </div>
                 <Footer name={this.state.name}/>
